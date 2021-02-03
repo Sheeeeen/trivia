@@ -32,12 +32,12 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 ### Goal 1: Render the answer choices from sample_data.json on the screen.
 
-- [ ] In App.jsx, create an Answer component.
-- [ ] Render an instance of `<Answer />` inside of `<Question />`.
-- [ ] Add props to `<Answer />` with the text "Answer goes here".
-  - [ ] Pass props for the answer choices into `<Question />`.
-  - [ ] Use those props to render the Answer components inside `<Question />` to display the answer choices.
-- [ ] Refactor to use map to map over all answer choices.
+- [ x ] In App.jsx, create an Answer component.
+- [ x ] Render an instance of `<Answer />` inside of `<Question />`.
+- [ x ] Add props to `<Answer />` with the text "Answer goes here".
+  - [ x ] Pass props for the answer choices into `<Question />`.
+  - [ x ] Use those props to render the Answer components inside `<Question />` to display the answer choices.
+- [ x ] Refactor to use map to map over all answer choices.
 
 > ![Day 2.0 goal](https://i.imgur.com/VpA8eRc.png)
 
