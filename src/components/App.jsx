@@ -5,10 +5,11 @@ import data from "../sample_data.json";
 function App() {
   let questionNo = 0;
   let [answered, setIsAnswered] = useState(false);
+  let correct_choice_index = data[questionNo].question.correct_choice_index;
+  let display_answer = data[questionNo].question.choices[correct_choice_index];
   return (
     <div className="app">
       <h1>Trivia!</h1>
-
       <h4>
         <Question
           text={data[questionNo].question.text}
@@ -16,7 +17,7 @@ function App() {
         />
       </h4>
       <button onClick={() => setIsAnswered(true)}>Answer</button>
-      {answered ? data[questionNo].question.correct_choice_index : ""}
+      {answered ? <h3>The correct answer is {display_answer} </h3> : ""}
       <NextQuestion />
     </div>
   );
@@ -31,7 +32,7 @@ function Question(props) {
         return (
           <p>
             {" "}
-            <Answer text={choice} />{" "}
+            <Choice text={choice} />{" "}
           </p>
         );
       })}
@@ -43,7 +44,7 @@ function NextQuestion() {
   return <button> Click Me! </button>;
 }
 
-function Answer(props) {
+function Choice(props) {
   return <div> {props.text} </div>;
 }
 

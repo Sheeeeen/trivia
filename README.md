@@ -45,7 +45,7 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 - [ x ] Add state to `<App />` using the `useState` React hook to keep track of if the question is answered.
 - [ x ] Add a button to the App component that updates state to `isAnswered` when clicked.
-- [ ] Set the state of `isAnswered` to display the correct answer choice.
+- [ x ] Set the state of `isAnswered` to display the correct answer choice.
 
 > ![Day 2.5 goal - unanswered](https://i.imgur.com/JI6GroE.png) >![Day 2.5 goal - answered](https://i.imgur.com/rufYX84.png)
 
