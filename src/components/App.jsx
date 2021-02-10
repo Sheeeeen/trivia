@@ -3,10 +3,15 @@ import "../css/App.css";
 import data from "../sample_data.json";
 
 function App() {
-  let questionNo = 0;
+  let [questionNo, setQuestionNo] = useState(0);
   let [answered, setIsAnswered] = useState(false);
   let correct_choice_index = data[questionNo].question.correct_choice_index;
   let display_answer = data[questionNo].question.choices[correct_choice_index];
+
+  function NumberQuestion() {
+    setQuestionNo(questionNo + 1);
+  }
+
   return (
     <div className="app">
       <h1>Trivia!</h1>
@@ -18,7 +23,7 @@ function App() {
       </h4>
       <button onClick={() => setIsAnswered(true)}>Answer</button>
       {answered ? <h3>The correct answer is {display_answer} </h3> : ""}
-      <NextQuestion />
+      <NextQuestion sequence={NumberQuestion} />
     </div>
   );
 }
@@ -40,8 +45,17 @@ function Question(props) {
   );
 }
 
-function NextQuestion() {
-  return <button> Click Me! </button>;
+function NextQuestion(props) {
+  return (
+    <button
+      onClick={() => {
+        props.sequence();
+      }}
+    >
+      {" "}
+      Click Me!{" "}
+    </button>
+  );
 }
 
 function Choice(props) {
