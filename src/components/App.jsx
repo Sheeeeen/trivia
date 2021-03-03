@@ -23,7 +23,9 @@ function App() {
       </h4>
       <button onClick={() => setIsAnswered(true)}>Answer</button>
       {answered ? <h3>The correct answer is {display_answer} </h3> : ""}
-      <NextQuestion sequence={NumberQuestion} />
+      {questionNo === data.length - 1 ? null : (
+        <NextQuestion sequence={NumberQuestion} answered={setIsAnswered} />
+      )}
     </div>
   );
 }
@@ -50,6 +52,7 @@ function NextQuestion(props) {
     <button
       onClick={() => {
         props.sequence();
+        props.answered(false);
       }}
     >
       {" "}
