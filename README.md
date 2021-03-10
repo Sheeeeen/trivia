@@ -65,21 +65,21 @@ In this unit, coders will work in groups to build a project using HTML, CSS, Rea
 
 ### Goal 2: Add functionality so that when the user clicks on an answer choice, the correct answer appears.
 
-- [ ] Inside the map function for the Answer components, add an event handler that updates the state of `isAnswered` to be the choice that the user clicks.
-  - [ ] HINT: Use props to pass down the state from `<App />`.
-  - [ ] HINT: Don't forget to pass your `onClick` down as a prop as well.
-- [ ] Inside `<App />` (below state and above return), write a conditional that checks if the answer clicked is the correct answer.
-  - [ ] Display text on the screen telling the user if their answer choice was correct.
-  - [ ] Display text on the screen telling the user what the correct answer was.
-  - [ ] HINT: To do this, you should create a variable and display that variable inside your return statement.
+- [ x ] Inside the map function for the Answer components, add an event handler that updates the state of `isAnswered` to be the choice that the user clicks.
+  - [ x ] HINT: Use props to pass down the state from `<App />`.
+  - [ x ] HINT: Don't forget to pass your `onClick` down as a prop as well.
+- [ x ] Inside `<App />` (below state and above return), write a conditional that checks if the answer clicked is the correct answer.
+  - [ x ] Display text on the screen telling the user if their answer choice was correct.
+  - [ x ] Display text on the screen telling the user what the correct answer was.
+  - [ x ] HINT: To do this, you should create a variable and display that variable inside your return statement.
   - [ ] BONUS: Use [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) instead of string concatenation.
 
 ### Goal 3: Sort your Trivia app into separate files and import/export the components.
 
-- [ ] Create a new `.js` file inside the components folder for each of your components.
-- [ ] Move the code for your components into their new files.
-- [ ] Add an export to each of your components.
-- [ ] Import all of your components into the correct files.
+- [ x ] Create a new `.js` file inside the components folder for each of your components.
+- [ x ] Move the code for your components into their new files.
+- [ x ] Add an export to each of your components.
+- [ x ] Import all of your components into the correct files.
 
 > ![Day 3.5 correct](https://i.imgur.com/HC7M6LH.png) >![Day 3.5 wrong](https://i.imgur.com/DWQu3bb.png)
 
